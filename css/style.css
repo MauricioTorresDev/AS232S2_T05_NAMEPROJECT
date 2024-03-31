@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik+Scribble&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+
+* {
+     text-decoration: none;
+}
+
+:root {
+     --main-color1: #0C1B5C;
+     --main-color2: #C31C22;
+     --second-color: #394F64;
+     --font-size-header1: 1.1rem;
+     --font-style-header1: "Montserrat", sans-serif;
+     --font-style-fondo: "Modak", system-ui;
+     --font-body: "Rubik Scribble", system-ui;
+     --secondary: #dbfffe;
+     --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.header {
+     position: relative;
+     top: 0;
+     left: 0;
+     right: 0;
+     z-index: 1000;
+     background: var(--white);
+     box-shadow: var(--box-shadow);
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 2rem 9%;
+     font-family: var(--font-style-header1);
+     font-size: var(--font-size-header1);
+}
+
+.header .img {
+     max-width: 100px;
+     justify-content: none;
+}
+
+.header .logo {
+     font-size: var(--font-size-header1);
+     font-weight: bolder;
+     color: var(--black);
+     display: flex;
+     align-items: center;
+}
+
+.header .logo i {
+     color: var(--main-color2);
+     padding-right: .5rem;
+}
+
+.header .navbar a {
+
+     color: var(--black);
+     margin: 0 1rem;
+     padding-block: 1rem;
+}
+
+
+.header .navbar a:hover {
+     color: var(--main-color2);
+}
+
+.header .navbar .hover-underline {
+     position: relative;
+     max-width: max-content;
+}
+
+.header .navbar .hover-underline::after {
+     content: '';
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     width: 100%;
+     height: .5rem;
+     border-block: .1rem solid var(--main-color2);
+     transform: scaleX(0.2);
+     opacity: 0;
+     transition: 500ms ease;
+     font-weight: 900;
+}
+
+.header .navbar .hover-underline:is(:hover, :focus-visible)::after {
+     transform: scaleX(1);
+     opacity: 1;
+}
+
+.header .icons div:hover {
+     color: var(--main-color1);
+}
+
+.fondo {
+     background-image: url('../img/fondoRpC.jpg');
+     background-size: cover;
+     background-position: center;
+     text-align: center;
+     padding: 350px 0;
+     display: flex;
+}
+
+.fondo-content {
+     color: #fff;
+     max-width: 600px;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     margin: auto;
+}
+
+.fondo-content h1 {
+     -webkit-text-stroke-width: 2px;
+     -webkit-text-stroke-color: var(--main-color1);
+     font-family: var(--font-style-fondo);
+     color: white;
+     font-size: 120px;
+
+}
+
+.fondo-logof {
+     margin: auto;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+
+}
+
+.conocer {
+     padding: 60px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-top: 30px;
+     align-items: flex-start;
+}
+
+.conocer-texto {
+     flex: 1;
+     padding-right: 20px;
+}
+
+.conocer-texto h2 {
+     font-size: 30px;
+     font-weight: 90;
+}
+
+.conocer-texto p {
+     font-size: 20px;
+     line-height: 1.7;
+}
+
+.conocer-imagen {
+     flex: 1;
+}
+
+.conocer-imagen img {
+     max-width: 70%;
+     height: auto;
+     border-radius: 20px;
+
+}
+
+#menu-btn {
+     display: none;
+}
+
+header.sticky {
+
+     background-color: #dbfffe;
+     position: fixed;
+}
