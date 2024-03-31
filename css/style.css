@@ -173,3 +173,37 @@ header.sticky {
      background-color: #dbfffe;
      position: fixed;
 }
+/* estilo letras */
+h1 {
+     font-family: var(--font-style-header1);
+     color: var(--main-color1);
+     font-size: 2rem;
+     font-weight: 600;
+}
+
+h1 span {
+     color: var(--second-color);
+     position: relative;
+}
+
+h1 span::before {
+     content: "";
+     height: 30px;
+     width: 2px;
+     position: absolute;
+     top: 50%;
+     right: -8px;
+     background: var(--second-color);
+     transform: translateY(-45%);
+     animation: blink 0.7s infinite;
+}
+
+h1 span.stop-blinking::before {
+     animation: none;
+}
+
+@keyframes blink {
+     50% {
+          opacity: 0
+     }
+}
