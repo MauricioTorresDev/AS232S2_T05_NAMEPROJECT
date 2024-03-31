@@ -207,3 +207,43 @@ h1 span.stop-blinking::before {
           opacity: 0
      }
 }
+/* MODO OSCURO */
+.dark-mode {
+     --white: #111;
+     --black: #fff;
+     --main-color1: #dbfffe;
+     --main-color2: #C31C22;
+     --second-color: #394F64;
+     background-color: var(--black);
+     color: var(--white);
+}
+
+section {
+     font-size: 30px;
+}
+
+body.dark-mode {
+     background-color: #111;
+     color: white;
+}
+
+.dark-mode .header {
+     background-color: var(--black);
+     color: var(--white);
+}
+
+.dark-mode .header .logo {
+     color: var(--main-color2);
+}
+
+.dark-mode .header .navbar a {
+     color: var(--white);
+}
+
+.dark-mode .header .navbar a:hover {
+     color: var(--main-color2);
+}
+
+.dark-mode .fondo h1 {
+     -webkit-text-stroke-color: var(--main-color2);
+}
