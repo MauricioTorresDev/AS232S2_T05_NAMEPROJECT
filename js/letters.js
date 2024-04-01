@@ -1,5 +1,5 @@
 const dynamicText = document.querySelector("h1 span");
-const words = ["HOLA", "BIENVENIDOS", "ESTUDIANTES"];
+const words = ["Bienvenidos a", "República de Chile"];
 
 let wordIndex = 0;
 let charIndex = 0;
@@ -12,7 +12,7 @@ const typeEffect = () => {
      if (!isDeleting && charIndex < currentWord.length) {
 
           charIndex++;
-          setTimeout(typeEffect, 200);
+          setTimeout(typeEffect, 100);
      } else if (isDeleting && charIndex > 0) {
 
           charIndex--;
